@@ -4,8 +4,6 @@
 3. dataclass + inheritance
 4. inheritance
 5. class method and class variable
-6. public , private, protected
-7. exception
 
 
 ## MTV frameworks
