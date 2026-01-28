@@ -1,1 +1,2 @@
 print("Olala")
+print("Oyaya")
