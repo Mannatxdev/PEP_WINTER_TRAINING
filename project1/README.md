@@ -5,7 +5,8 @@
 4. uv pip install django
 
 ## creating Project Dependacy
-1. django-admin startproject mysite .(file name)
+1. django-admin startproject mysite .(folder name)
+2. python manage.py startapp .
 
 ## how to run server
 1. python manage.py runserver

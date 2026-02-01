@@ -9,7 +9,7 @@
 
 ## Installing Django-tailwind ##
 1.  uv pip install django-tailwind
-2.  uv pip install django-tailwind[#cookiecutter,honcho,reload]
+2.  uv pip install django-tailwind[#cookiecutter,honcho,reload] ,remove # then use
 3.  cd portfolio
 4.  python manage.py tailwind init
 
