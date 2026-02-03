@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f9;
+}
+
+.navbar {
+    background: #4a6cf7;
+    padding: 12px 0;
+    color: white;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+/* ### */
+/* Center the card */
+.register-wrapper {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bigger card */
+.register-card {
+    width: 460px;
+    padding: 45px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.register-card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+/* Space between fields */
+.input-group {
+    margin-bottom: 22px;
+}
+
+/* Label */
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* BIG input fields */
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Focus effect */
+.input-group input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 5px rgba(74,108,247,0.3);
+    outline: none;
+}
+
+/* Large button */
+.btn-register {
+    width: 100%;
+    padding: 14px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-register:hover {
+    background: #3b5bdb;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+}

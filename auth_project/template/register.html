@@ -1,0 +1,32 @@
+{% extends 'app.html' %}
+{% block content %}
+
+<div class="register-wrapper">
+    <div class="register-card">
+        <h2>Create Account</h2>
+
+        <form method="POST" class="register-form">
+            {% csrf_token %}
+
+            <div class="input-group">
+                <label>Username</label>
+                {{ form.username }}
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                {{ form.password1 }}
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                {{ form.password2 }}
+            </div>
+
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}
