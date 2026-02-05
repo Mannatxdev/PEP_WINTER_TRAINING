@@ -28,3 +28,11 @@
 3.    STATIC_URL = '/static'
 4.    STATICFILES_DIRS = [ os.path.join(BASE_DIR,'static')]
 
+
+
+## 04/01/26 goal ##
+1. project creation
+2. app creation
+3. creating superuser adding it and showing on the page
+4. taking input from user for name password etc
+

@@ -23,9 +23,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n9q#kn0yy4!8sy72y!@3j-^2mnb06edm@w8lul(4!4oqn5oad#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -57,6 +59,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
+
+#gpt line
+NPM_BIN_PATH = r"C:/Program Files/nodejs/npm.cmd"
 
 TEMPLATES = [
     {
