@@ -23,6 +23,6 @@ urlpatterns = [
     path('', include('polls.urls')),
     #path('polls', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('register', views.register, name='register'),
+    path('sign_up', views.sign_up, name='sign_up'),
     path('login', views.login_view, name='login'),
 ]

@@ -6,3 +6,7 @@ class InputForm(forms.Form):
     roll_number = forms.IntegerField(help_text = "enter6 digit roll mumber")
     password = forms.CharField(widget = forms.PasswordInput)
 
+
+
+
+
