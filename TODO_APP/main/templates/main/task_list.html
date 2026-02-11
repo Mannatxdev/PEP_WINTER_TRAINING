@@ -6,25 +6,52 @@
 <body>
 
 <h1>My Tasks</h1>
-
 <a href="{% url 'add_task' %}">➕ Add Task</a>
 
 <ul>
-    {% for task in tasks %}
-        <li>
+{% for task in tasks %}
+    <li>
+        <h3>
             {% if task.completed %}
                 <strike>{{ task.title }}</strike>
             {% else %}
                 {{ task.title }}
             {% endif %}
+        </h3>
 
-            <a href="{% url 'update_task' task.id %}">✏ Edit</a>
-            <a href="{% url 'complete_task' task.id %}">✔ Complete</a>
-            <a href="{% url 'delete_task' task.id %}">❌ Delete</a>
-        </li>
-    {% empty %}
-        <li>No tasks yet</li>
-    {% endfor %}
+        <a href="{% url 'update_task' task.id %}">✏ Edit</a>
+        <a href="{% url 'complete_task' task.id %}">✔ Complete</a>
+        <a href="{% url 'delete_task' task.id %}">❌ Delete</a>
+
+        <!-- 🔽 SUBTASK SECTION STARTS HERE -->
+        <ul>
+            {% for sub in task.subtasks.all %}
+                <li>
+                    {% if sub.completed %}
+                        <strike>{{ sub.title }}</strike>
+                    {% else %}
+                        {{ sub.title }}
+                    {% endif %}
+
+                    <a href="{% url 'toggle_subtask' sub.id %}">✔</a>
+                    <a href="{% url 'delete_subtask' sub.id %}">❌</a>
+                </li>
+            {% empty %}
+                <li>No subtasks</li>
+            {% endfor %}
+        </ul>
+
+        <form method="POST" action="{% url 'add_subtask' task.id %}">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Add subtask" required>
+            <button type="submit">Add</button>
+        </form>
+        <!-- 🔼 SUBTASK SECTION ENDS -->
+
+    </li>
+{% empty %}
+    <li>No tasks yet</li>
+{% endfor %}
 </ul>
 
 </body>

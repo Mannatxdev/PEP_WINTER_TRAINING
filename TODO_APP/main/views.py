@@ -39,3 +39,31 @@ def delete_task(request, pk):
     task = get_object_or_404(Task, id=pk)
     task.delete()
     return redirect('task_list')
+
+
+from .models import Task, SubTask
+from .forms import TaskForm, SubTaskForm
+
+
+def add_subtask(request, pk):
+    task = get_object_or_404(Task, id=pk)
+    if request.method == 'POST':
+        form = SubTaskForm(request.POST)
+        if form.is_valid():
+            subtask = form.save(commit=False)
+            subtask.task = task
+            subtask.save()
+    return redirect('task_list')
+
+
+def toggle_subtask(request, pk):
+    subtask = get_object_or_404(SubTask, id=pk)
+    subtask.completed = not subtask.completed
+    subtask.save()
+    return redirect('task_list')
+
+
+def delete_subtask(request, pk):
+    subtask = get_object_or_404(SubTask, id=pk)
+    subtask.delete()
+    return redirect('task_list')
