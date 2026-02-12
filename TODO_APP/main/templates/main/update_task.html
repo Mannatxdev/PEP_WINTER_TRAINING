@@ -2,6 +2,69 @@
 <html>
 <head>
     <title>Update Task</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: white;
+            display: inline-block;
+            padding: 25px 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        form p {
+            margin-bottom: 15px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #000;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -13,6 +76,7 @@
     <button type="submit">Update Task</button>
 </form>
 
+<br>
 <a href="{% url 'task_list' %}">⬅ Back to List</a>
 
 </body>
