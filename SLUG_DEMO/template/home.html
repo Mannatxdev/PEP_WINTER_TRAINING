@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+    <h1>All Posts</h1>
+    <hr>
+
+    {% for post in posts %}
+        <h2>
+            <a href="{% url 'post_detail' post.slug %}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <p>{{ post.content|truncatewords:20 }}</p>
+        <hr>
+    {% empty %}
+        <p>No posts available.</p>
+    {% endfor %}
+
+</body>
+</html>
