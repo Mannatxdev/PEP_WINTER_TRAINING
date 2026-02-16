@@ -25,3 +25,5 @@ def send_email_view(request):
         form = EmailForm()
 
     return render(request, 'send_email.html', {'form': form, 'success': success})
+
+

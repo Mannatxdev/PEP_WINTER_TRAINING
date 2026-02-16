@@ -7,6 +7,9 @@ class StudentSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'age', 'course']    
 
 
+    def validate_age(self, value):
+        if value <= 5:
+            raise serializers.ValidationError("Age must be greater than 5")
+        return value
 
 
-          
